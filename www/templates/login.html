@@ -1,0 +1,22 @@
+<ion-view view-title="Citizen Engagement">
+  <ion-content class="padding">
+    <div class="card">
+      <div class="item item-text-wrap">
+        Welcome to Citizen Engagement!
+        Please register to use the application.
+      </div>
+    </div>
+    <form name="loginForm">
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" placeholder="First Name" ng-model="user.firstname" required="required"/>
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Last Name" ng-model="user.lastname" required="required"/>
+        </label>
+      </div>
+      <p ng-if="error" class="error">{{ error }}</p>
+      <button class="button button-full button-positive" ng-click="register()" ng-disabled="loginForm.$invalid">Register</button>
+    </form>
+  </ion-content>
+</ion-view>
