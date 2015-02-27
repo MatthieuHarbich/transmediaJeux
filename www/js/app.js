@@ -60,6 +60,15 @@ angular.module('citizen-engagement', ['ionic'])
         }
       }
     })
+
+    .state('tab.issueDetails', {
+      url: '/issueDetails/:issueId',
+      views: {
+        'tab-issueList': {
+          templateUrl: 'templates/issueDetails.html'
+        }
+      }
+    })
   ;
 
   // Define the default state (i.e. the first page displayed when the app opens).
